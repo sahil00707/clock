@@ -1,0 +1,6 @@
+<form action="#" #myform="ngForm">
+    <input ngModel name="name" type="text">
+    <input ngModel name="email" type="email">
+    <input ngModel name="password" type="password">
+     <button (click)="register(myform.value)">Register</button>
+</form>
