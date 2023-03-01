@@ -9,13 +9,14 @@ import {MyguardGuard} from './myguard.guard'
 const routes: Routes = [
 
   {
-    path:'app-register',
+    path:'',
     component:RegisterComponent
   },
   {
     path:'app-login',
     component:LoginComponent
   },
+ 
   
   {
     path:'app-home',

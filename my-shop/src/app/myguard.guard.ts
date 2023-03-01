@@ -11,7 +11,7 @@ export class MyguardGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return this.getData.log();
+    return true;
   }
   constructor(private getData:MyserviceService,private router:Router){
 

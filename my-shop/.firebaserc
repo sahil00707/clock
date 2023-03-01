@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "my-shop-be81b": {
+      "hosting": {
+        "my-shop": [
+          "my-shop-be81b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "my-shop-be81b"
+  }
+}

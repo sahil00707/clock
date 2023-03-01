@@ -1,10 +1,7 @@
 <div>
-     <input type="text" placeholder="search" ((keypress))="search(input.value)" #input ngModel>
+     <input type="text" placeholder="search"  #input ngModel>
             <button routerLink="">Home</button>
             <button routerLink="/app-register">Register</button>
             <button routerLink="/app-login">Login</button>
       
-</div>
-<div class="list" *ngFor="let i of this.list">
- <p>{{i.name|json}}</p>
 </div>

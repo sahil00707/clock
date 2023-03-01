@@ -1,37 +1,34 @@
 import { Injectable } from '@angular/core';
 import { Regi } from '../regi';
-import { HttpClient} from '@angular/common/http'
-import { Observable,BehaviorSubject } from 'rxjs';
+import { HttpClient } from '@angular/common/http'
+import { Observable, BehaviorSubject } from 'rxjs';
 import { Router } from '@angular/router';
+import { AngularFireAuth } from '@angular/fire/compat/auth'
 
+interface data {
+  email: string,
+  password: string
+}
 @Injectable({
   providedIn: 'root'
 })
 export class MyserviceService {
 
- 
-log(){ 
- if( localStorage.getItem('data')){
-  return true;
-}
-else 
-return false;
-}
-
-  saveData(data:Regi){
-this.http.post('http://localhost:3000/userData',data).subscribe((res)=>{
-  localStorage.setItem('data',JSON.stringify( data));
-
-});
-
-//
+  login(email: string, pass: string) {
+    this.angularfireauth.signInWithEmailAndPassword(email, pass).then(() => {
+      alert("hello")
+    },
+      err => {
+        alert("Oops")
+      }
+    )
   }
 
-  searchName(query:string){
-   
-return this.http.get(`http://localhost:3000/userData?q=${query}`);
+  register(email:string,pass:string){
+this.angularfireauth.createUserWithEmailAndPassword(email,pass).then(()=>{
+  console.log("Ok")
+})
   }
-
-  constructor(private http:HttpClient,private router:Router) { }
+  constructor(private http: HttpClient, private router: Router, private angularfireauth: AngularFireAuth) { }
 }
 
