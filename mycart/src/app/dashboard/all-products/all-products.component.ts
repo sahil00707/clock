@@ -17,21 +17,33 @@ export class AllProductsComponent {
 
   updateProduct(id: number) {
     this.router.navigate(['update-product'])
+    this.fetchProducts()
   }
 
   deleteProduct(id: number) {
-    this.myservice.deleteProduct(id)
-
+    this.myservice.deleteProduct(id).subscribe((res) => {
+      this.fetchProducts();
+    })
   }
 
+  filter(searchInput: string) {
+    this.myservice.filter(searchInput).subscribe((res) => {
+      this.productList = res;
+
+
+    })
+  }
   constructor(private myservice: MyserviceService, private router: Router) { }
 
   ngOnInit() {
+    this.fetchProducts();
+  }
+
+  fetchProducts() {
     this.myservice.fetchProducts().subscribe((res) => {
       if (res) {
         this.productList = res
       }
     })
   }
-
 }

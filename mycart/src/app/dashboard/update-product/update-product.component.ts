@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { productDataType } from 'src/app/data-type';
 import { MyserviceService } from 'src/app/services/myservice.service';
-
+import { AllProductsComponent } from '../all-products/all-products.component';
 @Component({
   selector: 'app-update-product',
   templateUrl: './update-product.component.html',
@@ -13,10 +13,11 @@ export class UpdateProductComponent implements OnInit {
   productId: string = '';
 
   updateProduct(form: productDataType) {
-
-this.myservice.updateProduct(form,this.productId)
+    this.myservice.updateProduct(form, this.productId).subscribe((res)=>{
+this.router.navigate(['/app-dashboard'])
+    })
   }
-  constructor(private routeInfo: ActivatedRoute, private myservice: MyserviceService) {
+  constructor(private routeInfo: ActivatedRoute, private myservice: MyserviceService,private router:Router) {
 
   }
   ngOnInit() {

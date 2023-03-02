@@ -10,5 +10,5 @@
         <input placeholder="Enter Product Quantity" name="quantity" required [(ngModel)]="productInfo.quantity"  type="number">
         <button [disabled]="!myform.valid" (click)="updateProduct(myform.value)" >Update</button>
     </form>
-   <button [routerLink]="['..']">Back To Products</button>
+   <button routerLink="/app-dashboard">Back To Products</button>
 </div>

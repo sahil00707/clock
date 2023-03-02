@@ -39,43 +39,35 @@
   ],
   "products": [
     {
-      "name": "ada",
-      "price": 12,
-      "color": "ads",
-      "image": "C:\\fakepath\\Screenshot (1).png",
-      "quantity": 12,
-      "id": 2
-    },
-    {
-      "name": "ada",
-      "price": 12,
-      "color": "ads",
-      "image": "C:\\fakepath\\Screenshot (1).png",
+      "name": "adasf",
+      "price": 124,
+      "description": "afsf",
+      "image": "C:\\fakepath\\Screenshot (2).png",
       "quantity": 12,
       "id": 3
     },
     {
-      "name": "abcdefgjggknnnjnjnj",
-      "price": 10000,
-      "description": "fsfg",
+      "name": "abcdf",
+      "price": 67,
+      "description": "adsmdkk",
       "image": "C:\\fakepath\\Screenshot (2).png",
-      "quantity": 4,
-      "id": 7
-    },
-    {
-      "name": "dgsds",
-      "price": 8787,
-      "description": "zcjzjcs",
-      "image": "C:\\fakepath\\Screenshot (2).png",
-      "quantity": 7,
+      "quantity": 12133,
       "id": 8
     },
     {
-      "name": "lll",
-      "price": 99,
-      "description": "hhjhjhh",
+      "name": "smart watch12345",
+      "price": 2000,
+      "description": "amoled",
       "image": "C:\\fakepath\\Screenshot (2).png",
-      "quantity": 9,
+      "quantity": 10,
+      "id": 9
+    },
+    {
+      "name": "adapol",
+      "price": 5,
+      "description": "sfs",
+      "image": "C:\\fakepath\\Screenshot (2).png",
+      "quantity": 24,
       "id": 10
     }
   ]

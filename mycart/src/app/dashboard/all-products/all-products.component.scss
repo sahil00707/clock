@@ -2,6 +2,22 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.searchBar{
+    display: flex;
+   justify-content: center;
+   margin: 20px;
+   input{
+    padding: 6px 10px;
+    width: 300px;
+    outline: none;
+   }
+   button{
+    background-color: blue;
+    color: white;
+    border: none;
+   }
+}
+
 .all_products {
     text-align: center;
   
@@ -9,6 +25,7 @@
         text-align: center;
         color: cadetblue;
     }
+  
     .list_of_products {
         display: flex;
         justify-content: space-around;

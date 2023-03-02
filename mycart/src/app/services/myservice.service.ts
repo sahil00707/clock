@@ -8,7 +8,8 @@ import { DataType, productDataType } from '../data-type';
 })
 export class MyserviceService {
   isAuthorized = new BehaviorSubject<boolean>(false);
-  isAdmin: boolean = false;
+  isAdmin =new BehaviorSubject<boolean>(false);
+  isAlreadyLoggedIn=new BehaviorSubject<boolean>(true);
 
   storeData(data: DataType) {
     return this.http.post('http://localhost:3000/userData', data).subscribe();
@@ -17,10 +18,10 @@ export class MyserviceService {
   getData(data: DataType) {
     this.http.get(`http://localhost:3000/userData?email=${data.email}&password=${data.password}`, { observe: 'response' }).subscribe((res: any) => {
       if (data.email == 'admin@gmail.com' && data.password == 'admin') {
-        this.isAdmin = true;
+        this.isAdmin.next(true)
       }
       else {
-        this.isAdmin = false
+        this.isAdmin.next(false)
       }
       if (res && res.body.length >= 1) {
         this.isAuthorized.next(true);
@@ -44,11 +45,16 @@ export class MyserviceService {
   }
 
   deleteProduct(id:number){
-this.http.delete(`http://localhost:3000/products/${id}`).subscribe()
+return this.http.delete(`http://localhost:3000/products/${id}`)
+
   }
 
   updateProduct(data:productDataType,id:string){
-this.http.put(`http://localhost:3000/products/${id}`,data).subscribe()
+return this.http.put(`http://localhost:3000/products/${id}`,data)
+  }
+
+  filter(searchInput:string){
+return this.http.get<productDataType[]>(`http://localhost:3000/products?q=${searchInput}`);
   }
 
   constructor(private http: HttpClient, private router: Router) { }

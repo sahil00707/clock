@@ -8,7 +8,8 @@ import { MyserviceService } from '../services/myservice.service';
 })
 export class NavbarComponent {
 
-  isAdmin=this.myservice.isAdmin
+  isAdmin=this.myservice.isAdmin.value
+  isAlreadyLoggedIn=!this.myservice.isAlreadyLoggedIn.value
   constructor(private myservice:MyserviceService){
 
   }
