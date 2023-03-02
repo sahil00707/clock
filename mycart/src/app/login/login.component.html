@@ -1,0 +1,14 @@
+<app-navbar></app-navbar>
+
+<div class="register">
+
+    <h1>Sign In </h1>
+    <form #myform="ngForm">
+        <!-- <input placeholder="Enter Your Name" name="name" required ngModel type="text"> -->
+        <input placeholder="Enter Your Email" name="email" required ngModel type="email">
+        <input placeholder="Enter Your Password" name="password" required ngModel type="password">
+        <button [disabled]="!myform.valid" (click)="login(myform.value)">Sign In</button>
+    </form>
+    <p>New user?  <a routerLink="/app-register">Register</a></p>
+   
+</div>

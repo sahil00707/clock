@@ -1,0 +1,82 @@
+{
+  "userData": [
+    {
+      "id": 1
+    },
+    {
+      "name": "sahil",
+      "email": "abc@gmail.com",
+      "password": "b",
+      "id": 2
+    },
+    {
+      "name": "sahil",
+      "email": "abc@gmail.com",
+      "password": "abcd",
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "name": "jjjjk",
+      "email": "asas@gmail.com",
+      "password": "huhu",
+      "id": 7
+    },
+    {
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin",
+      "id": 8
+    }
+  ],
+  "products": [
+    {
+      "name": "ada",
+      "price": 12,
+      "color": "ads",
+      "image": "C:\\fakepath\\Screenshot (1).png",
+      "quantity": 12,
+      "id": 2
+    },
+    {
+      "name": "ada",
+      "price": 12,
+      "color": "ads",
+      "image": "C:\\fakepath\\Screenshot (1).png",
+      "quantity": 12,
+      "id": 3
+    },
+    {
+      "name": "abcdefgjggknnnjnjnj",
+      "price": 10000,
+      "description": "fsfg",
+      "image": "C:\\fakepath\\Screenshot (2).png",
+      "quantity": 4,
+      "id": 7
+    },
+    {
+      "name": "dgsds",
+      "price": 8787,
+      "description": "zcjzjcs",
+      "image": "C:\\fakepath\\Screenshot (2).png",
+      "quantity": 7,
+      "id": 8
+    },
+    {
+      "name": "lll",
+      "price": 99,
+      "description": "hhjhjhh",
+      "image": "C:\\fakepath\\Screenshot (2).png",
+      "quantity": 9,
+      "id": 10
+    }
+  ]
+}

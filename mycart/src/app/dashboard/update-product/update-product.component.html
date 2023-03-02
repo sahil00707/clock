@@ -1,0 +1,14 @@
+
+<div class="register">
+
+    <h1>Add Product </h1>
+    <form #myform="ngForm" autocomplete="off">
+        <input placeholder="Enter Product Name"  name="name" required [(ngModel)]="productInfo.name" type="text">
+        <input placeholder="Enter Product Price" name="price" required [(ngModel)]="productInfo.price"  type="number">
+        <input placeholder="Enter Product Description" name="description" required [(ngModel)]="productInfo.description"  type="text">
+        <input placeholder="Enter Product Image" name="image" required ngModel type="file">
+        <input placeholder="Enter Product Quantity" name="quantity" required [(ngModel)]="productInfo.quantity"  type="number">
+        <button [disabled]="!myform.valid" (click)="updateProduct(myform.value)" >Update</button>
+    </form>
+   <button [routerLink]="['..']">Back To Products</button>
+</div>
