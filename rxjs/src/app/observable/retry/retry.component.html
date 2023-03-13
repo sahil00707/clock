@@ -1,0 +1,9 @@
+<div *ngIf="person!=null">
+    <ul>
+        <li>id: {{person[0].id}}</li>
+        <li>title: {{person[0].author}}</li>
+        <li>author: {{person[0].title}}</li>
+    </ul>
+</div>
+<button (click)="fetchDetails()">{{fetching?'Fetch':'Fetching'}}</button>
+<p>{{status}}</p>
