@@ -1,0 +1,11 @@
+<div class="grid">
+    <button class="single-grid" id="btn{{i}}" value="x" *ngFor="let i of arr" (click)="showCircleOrSquare(i)">
+        <div id="circleOrSquare{{i}}"></div>
+    </button>
+</div>
+<div class="showWinner">
+    <p class="winner" *ngIf="winner1">Player 1 Wins</p>
+    <p class="winner" *ngIf="winner2">Player 2 Wins</p>
+    <p class="winner" *ngIf="winnerx">It's a Draw</p>
+    <button *ngIf="winner1||winner2||winnerx" (click)="restart()">Restart</button>
+</div>
