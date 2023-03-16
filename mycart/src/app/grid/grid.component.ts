@@ -55,7 +55,6 @@ export class GridComponent implements OnInit {
         this.winner1 = true;
         this.disableAllBtns()
       }
-
     }
     if (temp == 9 && !this.winner1 && !this.winner2) this.winnerx = true
   }

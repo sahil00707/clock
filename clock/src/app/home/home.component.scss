@@ -1,0 +1,117 @@
+.body {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(91, 149, 250);
+    position: relative;
+
+    .center {
+        z-index: 20;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        height: 400px;
+        background-color: rgb(249, 251, 252);
+        border-radius: 50%;
+
+        .dhruvi {
+            width: 27px;
+            height: 27px;
+            background-color: black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .tik-tik {
+            position: absolute;
+            top: 90%;
+            left: 45%;
+          
+
+            .kanto {
+                width: 40px;
+                height: 200px;
+                background-color: black;
+                z-index: 0;
+                animation: kanto infinite linear  2s ;
+                transform-origin: top;
+            }
+            @keyframes kanto {
+             0%{
+                transform: rotate(0deg);
+             } 
+             25%{
+                transform: rotate(45deg);
+             }
+             50%{
+                transform: rotate(0deg);
+             }  
+             75%{
+                transform: rotate(-45deg);
+             }
+             100%{
+                transform: rotate(0);
+             }
+            }
+
+        }
+
+        .clock_kanta {
+
+            .hour_kanto,
+            .minit_kanto,
+            .second_kanto {
+                position: absolute;
+                top: 50%;
+                left: 49%;
+                width: 8px;
+                height: 100px;
+                background-color: black;
+                transform: rotate(180deg);
+                transform-origin: top;
+                border-bottom-left-radius: 25px;
+                border-bottom-right-radius: 25px;
+            }
+
+            .minit_kanto {
+                height: 140px;
+                transform: rotate(100deg);
+                animation: minits infinite 3600s linear;
+            }
+
+            .second_kanto {
+                background-color: red;
+                z-index: 0;
+                width: 6;
+                height: 180px;
+                transform: rotate(90deg);
+                animation: seconds infinite 60s linear;
+            }
+
+            @keyframes seconds {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes minits {
+                0% {
+                    transform: rotate(0);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+}
